@@ -2,6 +2,7 @@
 include ( $${PWD}/../../common/common_qt/sys_common.pri )
 
 TEMPLATE = lib
+TARGET = jpeg
 QT -= core
 QT -= gui
 QT -= widgets
