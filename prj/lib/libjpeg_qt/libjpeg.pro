@@ -6,8 +6,9 @@ QT -= core
 QT -= gui
 QT -= widgets
 
-INCLUDEPATH += $${PWD}/../../../include
 INCLUDEPATH += $${PWD}/../../../src/include/$$CODENAME
+INCLUDEPATH += $${PWD}/../../../src/include
+INCLUDEPATH += $${PWD}/../../../include
 
 SOURCES += \
     $${PWD}/../../../src/tij/jaricom.c \
