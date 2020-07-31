@@ -347,6 +347,10 @@
     <Text Include="..\..\..\src\tij\README.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\.git" />
+    <None Include="..\..\..\.gitignore" />
+    <None Include="..\..\..\msbuild_all.bat" />
+    <None Include="..\..\..\README.md" />
     <None Include="..\..\..\src\modulefiles\jpeglib.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

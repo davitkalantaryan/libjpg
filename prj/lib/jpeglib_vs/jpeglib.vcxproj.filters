@@ -16,6 +16,9 @@
     <Filter Include="deffile">
       <UniqueIdentifier>{33b2e600-ee06-469c-b133-058844c0a518}</UniqueIdentifier>
     </Filter>
+    <Filter Include="other">
+      <UniqueIdentifier>{e4a10623-0bfc-4621-b80f-2636af1dc305}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\tij\jaricom.c">
@@ -107,11 +110,25 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\src\tij\README.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\..\src\modulefiles\jpeglib.def">
       <Filter>deffile</Filter>
     </None>
+    <None Include="..\..\..\.git">
+      <Filter>other</Filter>
+    </None>
+    <None Include="..\..\..\.gitignore">
+      <Filter>other</Filter>
+    </None>
+    <None Include="..\..\..\msbuild_all.bat">
+      <Filter>other</Filter>
+    </None>
+    <None Include="..\..\..\README.md">
+      <Filter>other</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\src\tij\README.txt">
+      <Filter>other</Filter>
+    </Text>
   </ItemGroup>
 </Project>
