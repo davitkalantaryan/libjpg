@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <LibJpegVersion>3.0.0</LibJpegVersion>
+    <LibJpegConfigurationExtension Condition="'$(Configuration)'=='Debug'">d</LibJpegConfigurationExtension>
+    <LibJpegConfigurationExtension Condition="'$(Configuration)'=='Release'">r</LibJpegConfigurationExtension>
+    <LibJpegFullVersion>$(LibJpegVersion)-$(PlatformTarget)-e$(LibJpegConfigurationExtension)</LibJpegFullVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IntDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\.objects\$(ProjectName)\</IntDir>
+    <SourcePath>$(UDOOCSROOT)\dev\src\clientlib\pktrclntlib;$(UDOOCSROOT)\dev\src\clientlib;$(SourcePath)</SourcePath>
+    <TargetName>$(ProjectName).$(LibJpegFullVersion)</TargetName>
+    <OutDir>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\dll\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <PreBuildEvent>
+      <Command>::..\..\..\util\set_windows_target_platform.exe $(ProjectPath) $(WinTargetPlatformVersion)</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(UDOOCSROOT)\dev\src\clientlib;$(UDOOCSROOT)\dev\src\clientlib\pktrclntlib;$(UDOOCSROOT)\dev\include\wlac;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DOOCS_VERSION="$(DoocsVersion)"</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(UDOOCSROOT)\dev\arch\$(PROCESSOR_ARCHITECTURE)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DOOCSapi.lib;wlac.lib</AdditionalDependencies>
+      <ImportLibrary>$(ProjectDir)..\..\..\sys\win_$(Platformtarget)\$(Configuration)\lib\$(ProjectName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="LibJpegVersion">
+      <Value>$(LibJpegVersion)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
