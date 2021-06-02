@@ -72,7 +72,6 @@ prj/*/*/.vs/*/*
 !prj/*/*_vs*/*.sln
 !prj/*/*_vs*/*.vcxproj
 !prj/*/*_vs*/*.vcxproj.filters
-!prj/*/*_vs*/*.vcxproj.user
 !prj/*/*_vs*/*.vdproj
 !prj/*/*_vs*/*/*.vbproj
 !prj/*/*_vs*/*/*.vcxproj
