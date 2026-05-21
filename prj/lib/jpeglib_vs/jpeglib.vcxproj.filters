@@ -110,9 +110,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\src\modulefiles\jpeglib.def">
-      <Filter>deffile</Filter>
-    </None>
     <None Include="..\..\..\.git">
       <Filter>other</Filter>
     </None>
@@ -124,6 +121,9 @@
     </None>
     <None Include="..\..\..\README.md">
       <Filter>other</Filter>
+    </None>
+    <None Include="..\..\..\src\deffiles\jpeglib.def">
+      <Filter>deffile</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

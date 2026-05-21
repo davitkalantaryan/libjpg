@@ -19,3 +19,4 @@ EXPORTS
 	jpeg_finish_decompress
 	jpeg_calc_output_dimensions
 	jpeg_resync_to_restart
+    jpeg_mem_src
